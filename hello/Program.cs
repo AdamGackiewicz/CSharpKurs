@@ -6,7 +6,7 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            valueTypes();
+        //    valueTypes();
 
             for (;;)
             {
