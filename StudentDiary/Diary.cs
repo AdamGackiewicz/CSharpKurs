@@ -7,7 +7,7 @@ namespace StudentDiary
     class Diary
     {
         //stan (zmienne - pola)
-        List<float> ratings;
+        List<float> ratings = new List<float>();
 
         //zachowania
         public void AddRating(float rating)
@@ -20,7 +20,7 @@ namespace StudentDiary
             float sum = 0, avg = 0; 
             foreach (var rating in ratings)
             {
-                sum += rating
+                sum += rating;
             }
             avg = sum / ratings.Count();
 
@@ -29,6 +29,7 @@ namespace StudentDiary
 
         public float GiveMaxRating()
         {
+
             return ratings.Max();
         }
 
