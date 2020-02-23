@@ -15,6 +15,7 @@ namespace StudentDiary
         //stan (zmienne - pola)
         List<float> ratings; // = new List<float>();
 
+
         //zachowania
         /// <summary>
         /// Dodawanie oceny
@@ -24,37 +25,21 @@ namespace StudentDiary
         {
             ratings.Add(rating);
         }
-        /// <summary>
-        /// Obliczamy średnią naszych ocen
-        /// </summary>
-        /// <returns></returns>
-        public float CalculateAverage()
+
+        internal DiaryStatistics ComputeStatistics()
         {
-            float sum = 0, avg = 0; 
+            DiaryStatistics stats = new DiaryStatistics();
+
+            float sum = 0f;
             foreach (var rating in ratings)
             {
                 sum += rating;
             }
-            avg = sum / ratings.Count();
+            stats.AverageGrade = sum / ratings.Count();
+            stats.MaxGrade = ratings.Max();
+            stats.MinGrade = ratings.Min();
 
-            return avg;
-        }   
-        /// <summary>
-        /// Pobiera najwyższą ocene
-        /// </summary>
-        /// <returns></returns>
-        public float GiveMaxRating()
-        {
-
-            return ratings.Max();
+            return stats;
         }
-        /// <summary>
-        /// Pobieramy najniższą ocene
-        /// </summary>
-        /// <returns></returns>
-        public float GiveMinRating()
-        {
-            return ratings.Min();
-        }       
     }
 }
