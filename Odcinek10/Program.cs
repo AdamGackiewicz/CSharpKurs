@@ -20,6 +20,10 @@ namespace Odcinek10
             Diary diary3 = diary2;
             diary3.AddRating(1);
 
+            diary.AddRating(3);
+          
+
+
             int liczba = 2;
 
         }

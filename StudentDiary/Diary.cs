@@ -16,11 +16,18 @@ namespace StudentDiary
         List<float> ratings; // = new List<float>();
 
         //zachowania
+        /// <summary>
+        /// Dodawanie oceny
+        /// </summary>
+        /// <param name="rating">Nowa ocena</param>
         public void AddRating(float rating)
         {
             ratings.Add(rating);
         }
-
+        /// <summary>
+        /// Obliczamy średnią naszych ocen
+        /// </summary>
+        /// <returns></returns>
         public float CalculateAverage()
         {
             float sum = 0, avg = 0; 
@@ -32,13 +39,19 @@ namespace StudentDiary
 
             return avg;
         }   
-
+        /// <summary>
+        /// Pobiera najwyższą ocene
+        /// </summary>
+        /// <returns></returns>
         public float GiveMaxRating()
         {
 
             return ratings.Max();
         }
-
+        /// <summary>
+        /// Pobieramy najniższą ocene
+        /// </summary>
+        /// <returns></returns>
         public float GiveMinRating()
         {
             return ratings.Min();
