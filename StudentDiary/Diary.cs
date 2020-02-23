@@ -10,10 +10,17 @@ namespace StudentDiary
         public Diary()
         {
             ratings = new List<float>();
+            Count++ ;
+            Count2++ ;
         }
 
         //stan (zmienne - pola)
         private List<float> ratings; // = new List<float>();
+
+        public static float MinGrade = 0;
+        public static float MaxGrade = 10;
+        public static long Count = 0;
+        public long Count2 = 0;   //nie jest satic wic nie ma do niego dostępu z poza Klasy Diary
 
 
         //zachowania

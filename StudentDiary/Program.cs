@@ -24,6 +24,18 @@ namespace StudentDiary
             Console.WriteLine("Maksymalna ocena: " + stats.MaxGrade);
             Console.WriteLine("Minimalna ocena: " + stats.MinGrade);
 
+            Console.WriteLine("maxgrade=" + Diary.MaxGrade);
+            Console.WriteLine("mingrade=" + Diary.MinGrade);
+
+            Diary diary2 = new Diary();
+            Diary diary3 = new Diary();
+            Diary diary4 = new Diary();
+            Diary diary5 = new Diary();
+            Diary diary6 = new Diary();
+
+            Console.WriteLine("liczba dzienniczków: "+Diary.Count);
+            Console.WriteLine("count2 dzienniczka : " + diary.Count2);
+
 
             //Diary diary2 = new Diary();
             //diary2.AddRating(5);

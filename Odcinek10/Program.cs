@@ -24,7 +24,7 @@ namespace Odcinek10
           
 
 
-            int liczba = 2;
+           // int liczba = 2;
 
         }
     }
