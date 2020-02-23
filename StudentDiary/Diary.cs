@@ -13,7 +13,7 @@ namespace StudentDiary
         }
 
         //stan (zmienne - pola)
-        List<float> ratings; // = new List<float>();
+        private List<float> ratings; // = new List<float>();
 
 
         //zachowania
@@ -23,7 +23,11 @@ namespace StudentDiary
         /// <param name="rating">Nowa ocena</param>
         public void AddRating(float rating)
         {
-            ratings.Add(rating);
+            if (rating >= 0 && rating <=10)
+            {
+                ratings.Add(rating);
+
+            }
         }
 
         internal DiaryStatistics ComputeStatistics()
