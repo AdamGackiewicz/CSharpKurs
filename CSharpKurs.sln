@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructors", "Constructor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odcinek10", "Odcinek10\Odcinek10.csproj", "{9580D068-E38A-4AD2-A3E0-511DFDE5392D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.Tests", "Typy.Tests\Typy.Tests.csproj", "{3BF64A09-E8DE-498D-B6AC-C6853F7D1DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy", "Typy\Typy.csproj", "{26A1377F-CAC4-4739-9318-F7284B12FE38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{9580D068-E38A-4AD2-A3E0-511DFDE5392D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9580D068-E38A-4AD2-A3E0-511DFDE5392D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9580D068-E38A-4AD2-A3E0-511DFDE5392D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF64A09-E8DE-498D-B6AC-C6853F7D1DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF64A09-E8DE-498D-B6AC-C6853F7D1DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF64A09-E8DE-498D-B6AC-C6853F7D1DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF64A09-E8DE-498D-B6AC-C6853F7D1DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26A1377F-CAC4-4739-9318-F7284B12FE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A1377F-CAC4-4739-9318-F7284B12FE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A1377F-CAC4-4739-9318-F7284B12FE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A1377F-CAC4-4739-9318-F7284B12FE38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

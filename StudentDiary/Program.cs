@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Speech.Synthesis;
 
 namespace StudentDiary
 {
@@ -35,6 +36,10 @@ namespace StudentDiary
 
             Console.WriteLine("liczba dzienniczków: "+Diary.Count);
             Console.WriteLine("count2 dzienniczka : " + diary.Count2);
+
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.Speak("liczba dzienniczków: " + Diary.Count);
+
 
 
             //Diary diary2 = new Diary();
