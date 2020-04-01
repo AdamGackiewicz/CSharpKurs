@@ -23,5 +23,45 @@ namespace Typy.Tests
             //bool value = false;
             //Assert.IsTrue(value);
         }
+        [TestMethod]
+        public void PassByValueClass()
+        {
+            Diary diary = new Diary();
+            diary.Name = "Jacek";
+
+            SetName(diary);
+
+            Assert.AreEqual("Marcin", diary.Name);
+        }
+
+        [TestMethod]
+        public void PassByValueInt()
+        {
+            int x1 = 5;
+            IncrementNumber(x1);
+            Assert.AreEqual(5, x1);
+        }
+
+        [TestMethod]
+        public void PassByRefInt()
+        {
+            int x1 = 5;
+            IncrementNumber(ref x1);
+            Assert.AreEqual(15, x1);
+        }
+
+        private void IncrementNumber(ref int number)
+        {
+            number = 15;
+        }
+        private void IncrementNumber(int number)
+        {
+            number = 15;
+        }
+
+        private void SetName(Diary diary)
+        {
+            diary.Name = "Marcin";
+        }
     }
 }
