@@ -19,7 +19,17 @@ namespace Members
             //WriteResult("Min", (long)stats.MinGrade);
             //WriteResult("Min", stats.MinGrade, 1);
 
+            
+            //Dodajemy delegaty
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged);
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged2);
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged3);
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged4);
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged4);
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged4);
+
             diary.Name = "Dzienniczek Marcina";
+            diary.Name = "Jacek Hej";
             diary.Name = "";
             diary.Name = null;
             Console.WriteLine(diary.Name);
@@ -93,7 +103,27 @@ namespace Members
             // test 
             #endregion
         }
-
+        /// <summary>
+        /// Tworzymy delegaty. Można je wykorzystaćkilka razy.
+        /// </summary>
+        /// <param name="existingName"></param>
+        /// <param name="newName"></param>
+        private static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine($"Zmiana nazwy z {existingName} na {newName}");
+        }
+        private static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("******************");
+        }
+        private static void OnNameChanged3(string existingName, string newName)
+        {
+            Console.WriteLine("Hello");
+        }
+        private static void OnNameChanged4(string existingName, string newName)
+        {
+            Console.WriteLine("******************");
+        }
         static void WriteResult(string description, params float[] result)
         {
             Console.WriteLine(description + ": " + result[0] + " " + result[5]);

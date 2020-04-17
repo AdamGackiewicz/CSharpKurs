@@ -32,25 +32,32 @@ namespace Members
                 //}
                 if (!string.IsNullOrEmpty(value))
                 {
+                    if (_name != value)
+                    {
+                        NameChengaed(_name, value);
+                    }
                     _name = value;
                 }
 
-                
-                if (_name != value && NameChengaed != null)
-                {
-                    NameChangedEventArgs args = new NameChangedEventArgs();
-                    args.ExistingName = _name;
-                    args.NewName = value;
+                //Blokada 2 - delegaty - zostawić na później
+                //if (_name != value && NameChengaed != null)
+                //{
+                //    NameChangedEventArgs args = new NameChangedEventArgs();
+                //    args.ExistingName = _name;
+                //    args.NewName = value;
 
-                    NameChengaed(this, args);
-                }
+                //    NameChengaed(this, args);
+                //}
+
                 //15.04.2020 tymczasowo zablokowane
                // _name = value;
             }
         }
 
         // Delegat
-        public event NameChangedDelegate NameChengaed;
+        //zablokowanie 15.04.2020   
+        //public event NameChangedDelegate NameChengaed;
+        public NameChangedDelegate NameChengaed;
 
         // Zachowania
         public void AddRating(float rating)

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Members
 {
-    public delegate void NameChangedDelegate(object sender, NameChangedEventArgs args);
+    //zablokowane 15.04.2020   - nauka delegaty
+    //public delegate void NameChangedDelegate(object sender, NameChangedEventArgs args);
+    public delegate void NameChangedDelegate(string existingName,string newName);
+
 
 }
