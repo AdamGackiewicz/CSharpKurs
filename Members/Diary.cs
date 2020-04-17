@@ -54,10 +54,11 @@ namespace Members
             }
         }
 
-        // Delegat
+        // Delegat - Eventy oparte są na delegatach
+        
         //zablokowanie 15.04.2020   
         //public event NameChangedDelegate NameChengaed;
-        public NameChangedDelegate NameChengaed;
+        public event NameChangedDelegate NameChengaed;
 
         // Zachowania
         public void AddRating(float rating)

@@ -20,13 +20,16 @@ namespace Members
             //WriteResult("Min", stats.MinGrade, 1);
 
             
-            //Dodajemy delegaty
-            diary.NameChengaed += new NameChangedDelegate(OnNameChanged);
-            diary.NameChengaed += new NameChangedDelegate(OnNameChanged2);
-            diary.NameChengaed += new NameChangedDelegate(OnNameChanged3);
-            diary.NameChengaed += new NameChangedDelegate(OnNameChanged4);
-            diary.NameChengaed += new NameChangedDelegate(OnNameChanged4);
-            diary.NameChengaed += new NameChangedDelegate(OnNameChanged4);
+            //Dodajemy delegaty   -  pozniejsza zmiana składni pod event
+            diary.NameChengaed += new NameChangedDelegate(OnNameChanged);  //wymanaga składnia przy delegacie
+            diary.NameChengaed += OnNameChanged2;  // event delegate ustawia za kulisami - można zredukować składnie
+            diary.NameChengaed += OnNameChanged3;
+            diary.NameChengaed += OnNameChanged4;
+            diary.NameChengaed += OnNameChanged4;
+            diary.NameChengaed += OnNameChanged4;
+            diary.NameChengaed += null;  //event nie akceptuje zastąpienia zdarzeńpoprzez =null   można dodać +=null (co nic nie zmienia ale składnia akceptowalna)
+            diary.NameChengaed -= OnNameChanged4; // możliwe odejmowanie subskrypci przypisanych do evenu
+            diary.NameChengaed -= OnNameChanged4;
 
             diary.Name = "Dzienniczek Marcina";
             diary.Name = "Jacek Hej";
@@ -124,6 +127,8 @@ namespace Members
         {
             Console.WriteLine("******************");
         }
+
+
         static void WriteResult(string description, params float[] result)
         {
             Console.WriteLine(description + ": " + result[0] + " " + result[5]);
