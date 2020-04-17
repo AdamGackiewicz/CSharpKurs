@@ -25,11 +25,17 @@ namespace Members
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                // nie to  15.04.2020 zostawić na później
+                //if (string.IsNullOrEmpty(value))
+                //{
+                //    throw new ArgumentNullException("Nazwa nie moze być pusta");
+                //}
+                if (!string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Nazwa nie moze być pusta");
+                    _name = value;
                 }
 
+                
                 if (_name != value && NameChengaed != null)
                 {
                     NameChangedEventArgs args = new NameChangedEventArgs();
@@ -38,8 +44,8 @@ namespace Members
 
                     NameChengaed(this, args);
                 }
-
-                _name = value;
+                //15.04.2020 tymczasowo zablokowane
+               // _name = value;
             }
         }
 

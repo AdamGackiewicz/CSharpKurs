@@ -13,11 +13,16 @@ namespace Members
             diary.AddRating(8.4f);
 
             DiaryStatistics stats = diary.ComputeStatistics();
-            WriteResult("Avarage", stats.AverageGrade, 3, 5, 7, 8, 9);
-            WriteResult("Max", (int)stats.MaxGrade);
-            WriteResult("Min", (long)stats.MinGrade);
-            WriteResult("Min", stats.MinGrade, 1);
+            // 15.04.2020   blokuje by nie opzszkadzało - nauka o włwaściwościach.
+            //WriteResult("Avarage", stats.AverageGrade, 3, 5, 7, 8, 9);
+            //WriteResult("Max", (int)stats.MaxGrade);
+            //WriteResult("Min", (long)stats.MinGrade);
+            //WriteResult("Min", stats.MinGrade, 1);
 
+            diary.Name = "Dzienniczek Marcina";
+            diary.Name = "";
+            diary.Name = null;
+            Console.WriteLine(diary.Name);
             Console.ReadLine();
 
             #region stary kod
