@@ -15,8 +15,8 @@ namespace Members
             DiaryStatistics stats = diary.ComputeStatistics();
             WriteResult("Avarage", stats.AverageGrade, 3, 5, 7, 8, 9);
             WriteResult("Max", (int)stats.MaxGrade);
-            WriteResult("Min", (float)stats.MinGrade);
-            WriteResult("Min", (float)stats.MinGrade, 1);
+            WriteResult("Min", (long)stats.MinGrade);
+            WriteResult("Min", stats.MinGrade, 1);
 
             Console.ReadLine();
 
@@ -91,7 +91,7 @@ namespace Members
 
         static void WriteResult(string description, params float[] result)
         {
-            Console.WriteLine(description + ": " + result);
+            Console.WriteLine(description + ": " + result[0] + " " + result[5]);
         }
         static void WriteResult(string description, int result)
         {
@@ -103,7 +103,10 @@ namespace Members
         }
         static void WriteResult(string description, float result, long test)
         {
-            Console.WriteLine(description + ": " + result);
+            //altrnatyny zapis 
+            //Console.WriteLine("{0}: {1:C1}: {2}: {3}: {4}: {5} ",description, result, 2, 3, 4, 5);
+             Console.WriteLine($"{description}: {result:F3}: {2}: {3}: {4}: {5} ");
+
         }
         ////1.04.2020 zablokowane 
         //#region Metody Prywatne
