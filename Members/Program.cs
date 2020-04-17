@@ -111,19 +111,19 @@ namespace Members
         /// </summary>
         /// <param name="existingName"></param>
         /// <param name="newName"></param>
-        private static void OnNameChanged(string existingName, string newName)
+        private static void OnNameChanged(object sender, NameChangedEventArgs args)
         {
-            Console.WriteLine($"Zmiana nazwy z {existingName} na {newName}");
+            Console.WriteLine($"Zmiana nazwy z {args.ExistingName} na {args.NewName}");
         }
-        private static void OnNameChanged2(string existingName, string newName)
+        private static void OnNameChanged2(object sender, NameChangedEventArgs argse)
         {
             Console.WriteLine("******************");
         }
-        private static void OnNameChanged3(string existingName, string newName)
+        private static void OnNameChanged3(object sender, NameChangedEventArgs args)
         {
             Console.WriteLine("Hello");
         }
-        private static void OnNameChanged4(string existingName, string newName)
+        private static void OnNameChanged4(object sender, NameChangedEventArgs args)
         {
             Console.WriteLine("******************");
         }

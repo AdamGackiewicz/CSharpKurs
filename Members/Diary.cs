@@ -34,7 +34,14 @@ namespace Members
                 {
                     if (_name != value)
                     {
-                        NameChengaed(_name, value);
+
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+
+                        NameChengaed(this, args);  //this niejawny argument - to odniesienie do obiektu w którym sie znajdujemy
+                        
+                        
                     }
                     _name = value;
                 }
