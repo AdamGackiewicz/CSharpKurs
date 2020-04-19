@@ -14,6 +14,53 @@ namespace FlowControl
         static void Main(string[] args)
         {
             //instrictionIf();
+            //InstructionSwitch();
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int a = 0; a < 2; a++)
+            //    {
+            //        Console.WriteLine("Wartość i : {0} oraz wartosc a : {1} ", i,a);
+            //    }
+
+            //}
+
+            int i = 1;
+            //while (true) //pętla nieskończona
+            //while (i < 3)
+            //{
+            //   Console.WriteLine("Wartość c {0}",i);
+            //    i++;
+            //}
+
+            //do  // w petli do while   petla zawsze się wykona choć raz a później sprawdzany jest warunek
+            //{
+            //    Console.WriteLine("Wartość c {0}", i);
+            //    i++;
+            //} while (i > 3);
+
+            //int[] tab = { 1, 2, 3, 4, 5, 8, 12, 21 };
+
+            //foreach (var item in tab)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            for (;;)  //nieskończona pentla for
+            {
+                Console.WriteLine("Podaj imie");
+                string text = Console.ReadLine();
+
+                Console.WriteLine("Masz na imie {0}",text);
+            }
+
+
+
+            Console.ReadKey();
+        }
+
+        private static void InstructionSwitch()
+        {
             Console.WriteLine("Podaj imie:");
             name = Console.ReadLine();
 
@@ -36,7 +83,6 @@ namespace FlowControl
                     Metoda4();
                     break;
             }
-            Console.ReadKey();
         }
 
         private static void instrictionIf()
