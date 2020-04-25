@@ -16,47 +16,121 @@ namespace FlowControl
             //instrictionIf();
             //InstructionSwitch();
 
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    for (int a = 0; a < 2; a++)
-            //    {
-            //        Console.WriteLine("Wartość i : {0} oraz wartosc a : {1} ", i,a);
-            //    }
+            int[] ages = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            //}
+            //InstrukcjeSkokuContinueBreak(ages);
 
-            int i = 1;
-            //while (true) //pętla nieskończona
-            //while (i < 3)
-            //{
-            //   Console.WriteLine("Wartość c {0}",i);
-            //    i++;
-            //}
+            //InstrukcjaSkokuGoto(ages);
 
-            //do  // w petli do while   petla zawsze się wykona choć raz a później sprawdzany jest warunek
-            //{
-            //    Console.WriteLine("Wartość c {0}", i);
-            //    i++;
-            //} while (i > 3);
 
-            //int[] tab = { 1, 2, 3, 4, 5, 8, 12, 21 };
+            //PętlaFor();
 
-            //foreach (var item in tab)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            //PętlaWhileDoWhile();
+            //return;
+
+            //PętlaForeach();
+            //return;
+
+            //CheckAge(ages);
+
+            Console.ReadKey();
+        }
+        #region Metody
+        private static void PętlaForeach()
+        {
+            int[] tab = { 1, 2, 3, 4, 5, 8, 12, 21 };
+
+            foreach (var item in tab)
+            {
+                Console.WriteLine(item);
+            }
 
             for (;;)  //nieskończona pentla for
             {
                 Console.WriteLine("Podaj imie");
                 string text = Console.ReadLine();
 
-                Console.WriteLine("Masz na imie {0}",text);
+                Console.WriteLine("Masz na imie {0}", text);
+            }
+        }
+
+        private static void PętlaWhileDoWhile()
+        {
+            int i = 1;
+            while (true) //pętla nieskończona
+                while (i < 3)
+                {
+                    Console.WriteLine("Wartość c {0}", i);
+                    i++;
+                }
+
+            do  // w petli do while   petla zawsze się wykona choć raz a później sprawdzany jest warunek
+            {
+                Console.WriteLine("Wartość c {0}", i);
+                i++;
+            } while (i > 3);
+        }
+
+        private static void PętlaFor()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int a = 0; a < 2; a++)
+                {
+                    Console.WriteLine("Wartość i : {0} oraz wartosc a : {1} ", i, a);
+                }
+
+            }
+        }
+
+        private static void InstrukcjaSkokuGoto(int[] ages)
+        {
+            foreach (int age in ages)
+            {
+                if (age == 2)
+                {
+                    Console.WriteLine("Wiek wynosi : {0}", age);
+                    goto skip;
+                    Console.WriteLine("Hello");
+                }
+            }
+        // Jakiś kod
+
+        skip:
+            Console.WriteLine("Hello");
+        }
+
+        private static void InstrukcjeSkokuContinueBreak(int[] ages)
+        {
+            foreach (int age in ages)
+            {
+                if (age == 2)
+                {
+                    Console.WriteLine("Wiek wynosi : {0}", age);
+                    continue;
+                    Console.WriteLine("Hello");
+                }
+
+                if (age == 4)
+                {
+                    Console.WriteLine("Wiek wynosi : {0}", age);
+                    break;
+                    Console.WriteLine("Hello");
+                }
+            }
+        }
+
+        private static void CheckAge(int[] ages)
+        {
+            foreach (int age in ages)
+            {
+                if (age == 3)
+                {
+                    Console.WriteLine("Wiek wynosi : {0}", age);
+                    return;
+                }
             }
 
-
-
-            Console.ReadKey();
         }
 
         private static void InstructionSwitch()
@@ -137,5 +211,6 @@ namespace FlowControl
         {
             Console.WriteLine("Jesteś w metodzie 1");
         }
+        #endregion
     }
 }
