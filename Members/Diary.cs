@@ -25,26 +25,25 @@ namespace Members
             }
             set
             {
-                // nie to  15.04.2020 zostawić na później
-                //if (string.IsNullOrEmpty(value))
-                //{
-                //    throw new ArgumentNullException("Nazwa nie moze być pusta");
-                //}
-                if (!string.IsNullOrEmpty(value))
+
+                if (string.IsNullOrEmpty(value))
                 {
-                    if (_name != value)
-                    {
-
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-
-                        NameChengaed(this, args);  //this niejawny argument - to odniesienie do obiektu w którym sie znajdujemy
-                        
-                        
-                    }
-                    _name = value;
+             //       throw new ArgumentNullException("Nazwa nie moze być pusta");
                 }
+
+
+
+                if (_name != value && NameChengaed != null)
+                {
+                    NameChangedEventArgs args = new NameChangedEventArgs();
+                    args.ExistingName = _name;
+                    args.NewName = value;
+
+                    NameChengaed(this, args);  //this niejawny argument - to odniesienie do obiektu w którym sie znajdujemy
+                }
+                _name = value;
+
+
 
                 //Blokada 2 - delegaty - zostawić na później
                 //if (_name != value && NameChengaed != null)
@@ -57,12 +56,12 @@ namespace Members
                 //}
 
                 //15.04.2020 tymczasowo zablokowane
-               // _name = value;
+                // _name = value;
             }
         }
 
         // Delegat - Eventy oparte są na delegatach
-        
+
         //zablokowanie 15.04.2020   
         //public event NameChangedDelegate NameChengaed;
         public event NameChangedDelegate NameChengaed;
